@@ -6,7 +6,7 @@ import VideoTubePic from "@/assets/Projects/VideoTube.webp";
 
 export const projects = [
   {
-    name: "Binary Blogs - A Blogging Website",
+    name: "Binary Blogs",
     image: BinaryBlogspic,
     description:
       "A dynamic platform designed for a seamless and visually engaging blogging experience.",
