@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="flex lg:flex-row pt-50 w-[75%] min-h-[90vh] lg:min-h-screen items-center justify-center"
+      className="flex lg:flex-row pt-50 w-full lg-w-[75%] min-h-screen items-center justify-center"
     >
       <div className="text-[#FBFBBF] flex flex-col justify-center text-center z-10">
         <p className="text-[30px] md:text-[35px]">Hey!</p>
