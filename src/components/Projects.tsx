@@ -7,14 +7,13 @@ import {
 } from "@/components/ui/carousel";
 import ProjectCard from "./miscellaneous/ProjectCard";
 import { projects } from "@/components/miscellaneous/projectsData";
+import SectionHeading from "./miscellaneous/SectionHeading";
 
 const Projects: React.FC = () => {
   return (
-    <div id="projects" className="w-[70%] py-20">
-      <h2 className="pt-5 text-[#F56E0F] underline underline-offset-4 text-[2rem] text-center">
-        Projects
-      </h2>
-      <div className="pt-5 mt-5 text-black">
+    <div id="projects" className="w-full lg:w-[70%]">
+      <SectionHeading text="Projects" />
+      <div className="pt-2 text-black">
         <Carousel
           opts={{
             align: "start",
