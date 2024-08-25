@@ -90,7 +90,11 @@ export default function ContactForm() {
               <FormItem>
                 <FormLabel>Subject</FormLabel>
                 <FormControl>
-                  <Input placeholder="" {...field} className="text-black" />
+                  <Input
+                    placeholder="Let's Collaborate on Awesomeness"
+                    {...field}
+                    className="text-black"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -104,7 +108,7 @@ export default function ContactForm() {
                 <FormLabel>Message</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder=""
+                    placeholder="Spill the beans, I'm all ears!"
                     className="resize-none text-black"
                     {...field}
                   />
