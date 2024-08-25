@@ -26,18 +26,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         {name}
       </div>
       <div className="w-full flex flex-col pt-5 gap-5 items-center">
-        <div className="w-full h-[250px]">
+        <div className="w-full">
           <Image
             src={image}
             alt={name}
             quality={100}
             priority={false}
+            loading="lazy"
             className="border"
           />
         </div>
         <div className="flex flex-col gap-3 text-center md:text-left items-center md:items-start w-full px-5 justify-center">
           <p className="text-[15px] md:text-[16px] text-white">{description}</p>
-          <div className="flex gap-2 items-center">
+          <div className="flex flex-wrap w-full gap-2 items-center justify-center">
             {techStack.map((tech) => (
               <div
                 key={tech}
