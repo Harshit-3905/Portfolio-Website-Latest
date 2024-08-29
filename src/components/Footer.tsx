@@ -1,4 +1,3 @@
-import { FC } from "react";
 import {
   FaRegCopyright,
   FaLinkedin,
@@ -9,7 +8,7 @@ import { IoIosMail } from "react-icons/io";
 import Social from "./miscellaneous/Social";
 import Link from "next/link";
 
-const Footer: FC = () => {
+const Footer = () => {
   const hover = "text-[#F56E0F]";
 
   return (

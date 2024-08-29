@@ -37,14 +37,7 @@ export const projects = [
     image: TaskTrackerpic,
     description:
       "A productivity tool designed to streamline tasks and boost focus with advanced features.",
-    techStack: [
-      "React.js",
-      "Redux",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "ChakraUI",
-    ],
+    techStack: ["React.js", "Redux", "Node.js", "Express.js", "MongoDB"],
     liveLink: "https://task-tracker-us2h.onrender.com/",
     githubLink: "https://github.com/Harshit-3905/Task_Tracker",
   },
