@@ -15,15 +15,6 @@ export const projects = [
     githubLink: "https://github.com/Harshit-3905/Binary-Blogs",
   },
   {
-    name: "Portfolio Website",
-    image: PortfolioWebsitepic,
-    description:
-      "A curated space reflecting my professional persona and passion for web development.",
-    techStack: ["React.js", "ChakraUI"],
-    liveLink: "https://harshitjoshi.netlify.app/",
-    githubLink: "https://github.com/Harshit-3905/Portfolio_Website",
-  },
-  {
     name: "Audio Alley",
     image: AudioAlleyPic,
     description:

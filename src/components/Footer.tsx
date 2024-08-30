@@ -1,12 +1,6 @@
-import {
-  FaRegCopyright,
-  FaLinkedin,
-  FaGithub,
-  FaTwitter,
-} from "react-icons/fa";
-import { IoIosMail } from "react-icons/io";
-import Social from "./miscellaneous/Social";
+import { FaRegCopyright } from "react-icons/fa";
 import Link from "next/link";
+import SocialLinks from "./miscellaneous/SocialLinks";
 
 const Footer = () => {
   const hover = "text-[#F56E0F]";
@@ -31,35 +25,7 @@ const Footer = () => {
           Contact
         </Link>
       </div>
-      <div className="pt-5 flex gap-3">
-        <a
-          href="https://www.linkedin.com/in/harshit-joshi-40953321b/"
-          className="hover:text-[#F56E0F]"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Social icon={FaLinkedin} />
-        </a>
-        <a
-          href="https://github.com/Harshit-3905"
-          className="hover:text-[#F56E0F]"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Social icon={FaGithub} />
-        </a>
-        <a
-          href="https://twitter.com/Harshit3905"
-          className="hover:text-[#F56E0F]"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Social icon={FaTwitter} />
-        </a>
-        <a href="#contact" className="hover:text-[#F56E0F]">
-          <Social icon={IoIosMail} />
-        </a>
-      </div>
+      <SocialLinks />
       <div className="pt-10 flex items-center gap-2">
         <FaRegCopyright />
         <div className="text-sm">2024 Harshit Joshi. All rights reserved.</div>

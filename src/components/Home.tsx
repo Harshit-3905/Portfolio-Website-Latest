@@ -1,8 +1,6 @@
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
-import { IoIosMail } from "react-icons/io";
-import Social from "./miscellaneous/Social";
 import WordRotate from "@/components/magicui/word-rotate";
 import Ripple from "@/components/magicui/ripple";
+import SocialLinks from "./miscellaneous/SocialLinks";
 
 const Home = () => {
   return (
@@ -25,32 +23,7 @@ const Home = () => {
             "Problem Solver",
           ]}
         />
-        <div className="flex pt-5 gap-3 justify-center">
-          <a
-            href="https://www.linkedin.com/in/harshit-joshi-40953321b/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Social icon={FaLinkedin} />
-          </a>
-          <a
-            href="https://github.com/Harshit-3905"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Social icon={FaGithub} />
-          </a>
-          <a
-            href="https://twitter.com/Harshit3905"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Social icon={FaTwitter} />
-          </a>
-          <a href="#contact">
-            <Social icon={IoIosMail} />
-          </a>
-        </div>
+        <SocialLinks />
       </div>
       <Ripple mainCircleSize={420} mainCircleOpacity={10} numCircles={5} />
     </div>

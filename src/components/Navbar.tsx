@@ -9,35 +9,50 @@ export function Navbar() {
     {
       title: "Home",
       icon: (
-        <FaHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <FaHome
+          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+          aria-label="Home"
+        />
       ),
       href: "#home",
     },
     {
       title: "About",
       icon: (
-        <FaUser className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <FaUser
+          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+          aria-label="About"
+        />
       ),
       href: "#about",
     },
     {
       title: "Skills",
       icon: (
-        <FaCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <FaCode
+          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+          aria-label="Skills"
+        />
       ),
       href: "#skills",
     },
     {
       title: "Projects",
       icon: (
-        <AiOutlineFundProjectionScreen className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <AiOutlineFundProjectionScreen
+          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+          aria-label="Projects"
+        />
       ),
       href: "#projects",
     },
     {
       title: "Contact",
       icon: (
-        <IoCall className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IoCall
+          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+          aria-label="Contact"
+        />
       ),
       href: "#contact",
     },
