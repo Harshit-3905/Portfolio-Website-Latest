@@ -6,8 +6,8 @@ const About = () => {
   return (
     <div id="about" className="w-full lg:w-[75%] lg:h-screen">
       <SectionHeading text="About" />
-      <div className="flex flex-col md:flex-row lg:flex-row w-full py-10">
-        <div className="w-full md:w-2/5 lg:w-2/5 flex items-center justify-center">
+      <div className="flex flex-col gap-5 lg:flex-row w-full py-10">
+        <div className="w-full lg:w-2/5 flex items-center justify-center">
           <Image
             src={MyImage}
             alt="My Image"
@@ -16,7 +16,7 @@ const About = () => {
             quality={100}
           />
         </div>
-        <div className="w-full md:w-3/5 lg:w-3/5 text-center rounded-lg px-15 pt-10 md:pt-0 space-y-5">
+        <div className="w-full lg:w-3/5 text-center rounded-lg px-8 md:px-20 lg:px-0 pt-5 space-y-5">
           <p className="font-bold text-xl">Hi, I&apos;m Harshit!</p>
           <p className="text-lg text-center">
             I am a passionate developer and a Final Year Information Technology
