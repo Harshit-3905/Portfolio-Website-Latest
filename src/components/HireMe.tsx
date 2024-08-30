@@ -9,11 +9,11 @@ const HireMe = () => {
   return (
     <div className="w-full lg:w-[75%] py-10">
       <SectionHeading text="Why Hire Me?" />
-      <div className="flex flex-wrap lg:flex-nowrap w-full justify-around items-center pt-10 gap-5">
+      <div className="flex flex-wrap gap-5 pt-2 text-black justify-center lg:flex-nowrap">
         <HireMeCard
           src={communicativeImage}
           heading="Communicative"
-          description="I balance talking and listening hence ensuring effective communication."
+          description="I balance talking and listening ensuring effective communication."
         />
         <HireMeCard
           src={collaborativeImage}
