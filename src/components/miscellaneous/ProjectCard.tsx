@@ -2,14 +2,15 @@ import React from "react";
 import Image, { StaticImageData } from "next/image";
 import { CgScreen } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa";
+import Link from "next/link";
 
 interface ProjectCardProps {
   image: StaticImageData;
   name: string;
   description: string;
   techStack: Array<string>;
-  liveLink?: string;
-  githubLink?: string;
+  liveLink: string;
+  githubLink: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -49,22 +50,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             ))}
           </div>
           <div className="flex gap-2 w-full justify-center">
-            <div>
-              <a href={liveLink} target="_blank" rel="noopener noreferrer">
-                <button className="text-[15px] md:text-[18px] flex items-center gap-2 bg-[#F56E0F] rounded-xl border border-[#F56E0F] hover:text-[#F56E0F] hover:bg-[#262626] h-[45px] px-4">
-                  Live
-                  <CgScreen className="w-[15px] md:w-[18px] h-[15px] md:h-[18px]" />
-                </button>
-              </a>
-            </div>
-            <div>
-              <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                <button className="text-[15px] md:text-[18px] flex items-center gap-2 bg-[#F56E0F] rounded-xl border border-[#F56E0F] hover:text-[#F56E0F] hover:bg-[#262626] h-[45px] px-4">
-                  Github
-                  <FaGithub className="w-[15px] md:w-[18px] h-[15px] md:h-[18px]" />
-                </button>
-              </a>
-            </div>
+            <Link href={liveLink} target="_blank" rel="noopener noreferrer">
+              <button className="text-[15px] md:text-[18px] flex items-center gap-2 bg-[#F56E0F] rounded-xl border border-[#F56E0F] hover:text-[#F56E0F] hover:bg-[#262626] h-[45px] px-4">
+                Live
+                <CgScreen className="w-[15px] md:w-[18px] h-[15px] md:h-[18px]" />
+              </button>
+            </Link>
+            <Link href={githubLink} target="_blank" rel="noopener noreferrer">
+              <button className="text-[15px] md:text-[18px] flex items-center gap-2 bg-[#F56E0F] rounded-xl border border-[#F56E0F] hover:text-[#F56E0F] hover:bg-[#262626] h-[45px] px-4">
+                Github
+                <FaGithub className="w-[15px] md:w-[18px] h-[15px] md:h-[18px]" />
+              </button>
+            </Link>
           </div>
         </div>
       </div>
