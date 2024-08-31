@@ -12,7 +12,6 @@ const About = () => {
             src={MyImage}
             alt="My Image"
             className="w-80 h-80 rounded-full object-cover"
-            loading="lazy"
             quality={100}
           />
         </div>
