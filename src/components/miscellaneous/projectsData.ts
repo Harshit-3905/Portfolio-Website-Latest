@@ -1,5 +1,4 @@
 import BinaryBlogspic from "@/assets/Projects/BinaryBlogs.webp";
-import PortfolioWebsitepic from "@/assets/Projects/PortfolioWebsite.webp";
 import AudioAlleyPic from "@/assets/Projects/AudioAlley.webp";
 import TaskTrackerpic from "@/assets/Projects/TaskTracker.webp";
 import VideoTubePic from "@/assets/Projects/VideoTube.webp";
@@ -10,8 +9,8 @@ export const projects = [
     image: BinaryBlogspic,
     description:
       "A dynamic platform designed for a seamless and visually engaging blogging experience.",
-    techStack: ["React.js", "TailwindCSS", "Appwrite"],
-    liveLink: "https://binary-blogs.onrender.com/",
+    techStack: ["React.js", "TailwindCSS", "Appwrite", "S3", "CloudFront"],
+    liveLink: "https://binary-blogs.harshit-joshi.tech/",
     githubLink: "https://github.com/Harshit-3905/Binary-Blogs",
   },
   {
