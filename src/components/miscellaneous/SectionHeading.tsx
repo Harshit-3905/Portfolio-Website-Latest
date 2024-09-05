@@ -12,7 +12,7 @@ export default function SectionHeading(props: SectionHeadingProps) {
   const isInView = useInView(ref, { once: true });
   return (
     <div
-      className="py-10 text-[#F56E0F] text-2xl text-center font-semibold underline underline-offset-5 font-display tracking-[-0.1em] dark:text-white md:text-5xl md:leading-[5rem]"
+      className="py-10 text-[#F56E0F] text-2xl text-center font-medium underline underline-offset-4 tracking-tighter dark:text-white md:text-5xl md:leading-[5rem] font-sans"
       style={{
         transform: isInView ? "scale(1)" : "scale(0)",
         opacity: isInView ? 1 : 0,
