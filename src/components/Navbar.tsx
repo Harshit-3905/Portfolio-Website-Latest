@@ -27,16 +27,6 @@ export function Navbar() {
       href: "#about",
     },
     {
-      title: "Skills",
-      icon: (
-        <FaCode
-          className="h-full w-full text-neutral-500 dark:text-neutral-300"
-          aria-label="Skills"
-        />
-      ),
-      href: "#skills",
-    },
-    {
       title: "Projects",
       icon: (
         <AiOutlineFundProjectionScreen
@@ -45,6 +35,16 @@ export function Navbar() {
         />
       ),
       href: "#projects",
+    },
+    {
+      title: "Skills",
+      icon: (
+        <FaCode
+          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+          aria-label="Skills"
+        />
+      ),
+      href: "#skills",
     },
     {
       title: "Contact",
