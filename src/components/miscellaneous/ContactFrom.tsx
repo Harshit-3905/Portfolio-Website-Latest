@@ -3,7 +3,6 @@ import emailjs from "@emailjs/browser";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -14,6 +13,9 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { CheckIcon, ChevronRightIcon } from "lucide-react";
+import { AnimatedSubscribeButton } from "@/components/magicui/animated-subscribe-button";
+import { useState } from "react";
 
 const formSchema = z.object({
   name: z.string().min(2).max(50),
@@ -32,14 +34,22 @@ export default function ContactForm() {
       message: "",
     },
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      await emailjs.send(
+      const res = await emailjs.send(
         "service_tof52bh",
         "template_bpe2k9o",
         { ...values },
         "aRd8Bo25JM1hECd9W"
       );
+      if (res.status !== 200) {
+        form.reset();
+        setIsSubmitted(true);
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 3000);
+      }
     } catch (error) {
       console.log(error);
     }
@@ -118,9 +128,23 @@ export default function ContactForm() {
             )}
           />
           <div className="w-full flex justify-center">
-            <Button type="submit" className="bg-green-600">
-              Submit
-            </Button>
+            <AnimatedSubscribeButton
+              buttonColor="#F56E0F"
+              buttonTextColor="#ffffff"
+              subscribeStatus={isSubmitted}
+              initialText={
+                <span className="group inline-flex items-center">
+                  Submit{" "}
+                  <ChevronRightIcon className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+              }
+              changeText={
+                <span className="group inline-flex items-center">
+                  <CheckIcon className="mr-2 h-4 w-4" />
+                  Submitted{" "}
+                </span>
+              }
+            />
           </div>
         </form>
       </Form>
