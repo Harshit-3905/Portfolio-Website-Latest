@@ -25,7 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <div className="flex flex-col h-450px w-[90%] bg-[#262626] rounded-2xl p-3 items-center justify-center border border-[#FBFBFB]">
-      <div className="text-[20px] md:text-[30px] text-center text-[#F56E0F] underline underline-offset-4">
+      <div className="text-[15px] md:text-[30px] text-center text-[#F56E0F] underline underline-offset-4">
         {name}
       </div>
       <div
@@ -43,29 +43,29 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             className="border"
           />
         </div>
-        <div className="flex flex-col gap-3 text-center md:text-left items-center md:items-start w-full lg:w-1/2 px-5 justify-center">
-          <p className="text-[15px] md:text-[16px] text-white text-center">
+        <div className="flex flex-col gap-3 text-center md:text-left items-center md:items-start w-full lg:w-1/2 justify-center">
+          <p className="text-[14px] lg:text-[16px] text-white text-center">
             {description}
           </p>
-          <div className="flex flex-wrap w-full gap-2 items-center justify-center">
+          <div className="flex flex-wrap w-full gap-y-1 gap-x-2 items-center justify-center">
             {techStack.map((tech) => (
               <div
                 key={tech}
-                className="px-2 py-1 bg-black text-[#F56E0F] text-sm rounded-full"
+                className="px-2 py-1 bg-black text-[#F56E0F] text-[12px] lg:text-[16px] rounded-full"
               >
                 {tech}
               </div>
             ))}
           </div>
-          <div className="flex gap-2 pt-2 w-full justify-center">
+          <div className="flex gap-2 pt-1 lg:pt-2 w-full justify-center">
             <Link href={liveLink} target="_blank" rel="noopener noreferrer">
-              <button className="text-[15px] md:text-[18px] flex items-center gap-2 bg-[#F56E0F] rounded-xl border border-[#F56E0F] hover:text-[#F56E0F] hover:bg-[#262626] h-[45px] px-4">
+              <button className="text-[15px] md:text-[18px] flex items-center gap-2 bg-[#F56E0F] rounded-xl border border-[#F56E0F] hover:text-[#F56E0F] hover:bg-[#262626] h-[35px] px-3 lg:h-[45px] lg:px-4">
                 Live
                 <CgScreen className="w-[15px] md:w-[18px] h-[15px] md:h-[18px]" />
               </button>
             </Link>
             <Link href={githubLink} target="_blank" rel="noopener noreferrer">
-              <button className="text-[15px] md:text-[18px] flex items-center gap-2 bg-[#F56E0F] rounded-xl border border-[#F56E0F] hover:text-[#F56E0F] hover:bg-[#262626] h-[45px] px-4">
+              <button className="text-[15px] md:text-[18px] flex items-center gap-2 bg-[#F56E0F] rounded-xl border border-[#F56E0F] hover:text-[#F56E0F] hover:bg-[#262626] h-[35px] px-3 lg:h-[45px] lg:px-4">
                 Github
                 <FaGithub className="w-[15px] md:w-[18px] h-[15px] md:h-[18px]" />
               </button>
