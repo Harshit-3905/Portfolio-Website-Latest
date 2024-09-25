@@ -4,7 +4,10 @@ import SectionHeading from "./miscellaneous/SectionHeading";
 
 const About = () => {
   return (
-    <div id="about" className="w-full lg:w-[75%] lg:h-screen">
+    <div
+      id="about"
+      className="w-full lg:w-[75%] lg:max-h-[1000px] min-h-[700px]"
+    >
       <SectionHeading text="About" />
       <div className="flex flex-col gap-5 lg:flex-row w-full py-10">
         <div className="w-full lg:w-2/5 flex items-center justify-center">
@@ -33,12 +36,12 @@ const About = () => {
             growth mindset, I am ready to make a meaningful contribution and
             achieve great things.
           </p>
-          <div className="flex flex-col lg:flex-row lg:space-x-2 justify-center">
-            <p className="text-lg">Feel free to reach out to me at </p>
-            <p className="text-[#F56E0F] text-lg font-semibold">
+          <span className="mt-3 lg:space-x-2 justify-center">
+            <span className="text-lg">Feel free to reach out to me at </span>
+            <span className="text-[#F56E0F] text-lg font-semibold">
               harshitjoshidev@gmail.com
-            </p>
-          </div>
+            </span>
+          </span>
         </div>
       </div>
     </div>
