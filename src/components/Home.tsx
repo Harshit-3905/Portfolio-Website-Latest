@@ -21,6 +21,8 @@ const Home = () => {
             "Full Stack Developer",
             "Open Source Enthusiast",
             "Problem Solver",
+            "Freelancer",
+            "DevOps Enthusiast",
           ]}
         />
         <SocialLinks />
