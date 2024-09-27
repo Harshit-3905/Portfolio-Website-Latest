@@ -4,7 +4,7 @@ import SectionHeading from "./miscellaneous/SectionHeading";
 
 const Projects = () => {
   return (
-    <div id="projects" className="w-full lg:w-[70%]">
+    <div id="projects" className="w-full lg:w-[70%] mt-10">
       <SectionHeading text="Projects" />
       <div className="flex flex-wrap gap-5 pt-2 text-black justify-center">
         {projects.map((project, index) => (
