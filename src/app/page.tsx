@@ -8,6 +8,7 @@ import HireMe from "../components/HireMe";
 import Contact from "../components/Contact";
 import Starfield from "react-starfield";
 import "./globals.css";
+import Experience from "@/components/Experience";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Home />
       <Navbar />
       <About />
+      <Experience />
       <Projects />
       <Skills />
       <HireMe />
