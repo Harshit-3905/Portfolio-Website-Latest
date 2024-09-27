@@ -1,6 +1,6 @@
 import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
-import { FaHome, FaUser, FaCode } from "react-icons/fa";
+import { FaHome, FaUser, FaCode, FaLaptopCode } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 
@@ -25,6 +25,16 @@ export function Navbar() {
         />
       ),
       href: "#about",
+    },
+    {
+      title: "Experience",
+      icon: (
+        <FaLaptopCode
+          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+          aria-label="Experience"
+        />
+      ),
+      href: "#experience",
     },
     {
       title: "Projects",
@@ -59,7 +69,7 @@ export function Navbar() {
   ];
 
   return (
-    <div className="fixed bottom-5 flex items-center justify-between p-5 z-20 h-[10%]">
+    <div className="fixed bottom-5 flex items-center justify-between p-5 z-20 h-[10%] w-full">
       <FloatingDock items={links} />
     </div>
   );
