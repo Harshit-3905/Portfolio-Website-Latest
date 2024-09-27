@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-full lg:w-[75%] lg:max-h-[1000px] min-h-[700px]"
+      className="w-full lg:w-[75%] lg:max-h-[1000px] min-h-[700px] px-4"
     >
       <SectionHeading text="About" />
       <div className="flex flex-col gap-5 lg:flex-row w-full py-10">
