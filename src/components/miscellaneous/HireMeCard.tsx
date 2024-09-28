@@ -8,7 +8,7 @@ interface HireMeCardProps {
 
 const HireMeCard = (props: HireMeCardProps) => {
   return (
-    <div className="flex flex-col w-[80%] md:w-[35%] lg:w-[25%] h-450px bg-[#262626] rounded-2xl p-3 items-center justify-center border border-[#FBFBFB] text-center">
+    <div className="flex flex-col w-[90%] md:w-[35%] lg:w-[25%] h-auto bg-[#262626] rounded-2xl p-3 items-center justify-center border border-[#FBFBFB] text-center">
       <Image
         src={props.src}
         className="bg-white rounded-2xl"
