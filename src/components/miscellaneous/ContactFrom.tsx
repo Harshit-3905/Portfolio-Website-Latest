@@ -56,7 +56,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="w-4/5 pt-10 md:pt-0">
+    <div className="w-full md:w-4/5 pt-10 md:pt-0 px-3 md:px-0">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           <FormField
