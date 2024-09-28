@@ -24,8 +24,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   githubLink,
 }) => {
   return (
-    <div className="flex flex-col h-450px w-[90%] bg-[#262626] rounded-2xl p-3 items-center justify-center border border-[#FBFBFB]">
-      <div className="text-[15px] md:text-[30px] text-center text-[#F56E0F] underline underline-offset-4">
+    <div className="flex flex-col h-auto w-[90%] bg-[#262626] rounded-2xl p-3 items-center justify-center border border-[#FBFBFB]">
+      <div className="text-[20px] md:text-[30px] text-center text-[#F56E0F] underline underline-offset-4">
         {name}
       </div>
       <div
