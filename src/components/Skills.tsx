@@ -39,7 +39,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div id="skills" className="w-full lg:w-[75%] pb-7">
+    <div id="skills" className="w-full lg:w-[75%] pb-7 mt-10">
       <SectionHeading text="Skills" />
       <div className="flex flex-wrap gap-5 pt-10 px-10 items-center justify-center">
         {skills.map((skill) => (
