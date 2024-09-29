@@ -15,6 +15,7 @@ import {
   PostgresqlIcon,
   AWSIcon,
   PrismaIcon,
+  NginxIcon,
 } from "@/components/miscellaneous/Icons";
 import SectionHeading from "./miscellaneous/SectionHeading";
 
@@ -35,6 +36,7 @@ const skills = [
   { name: "PostgreSQL", icon: PostgresqlIcon },
   { name: "AWS", icon: AWSIcon },
   { name: "Prisma", icon: PrismaIcon },
+  { name: "Nginx", icon: NginxIcon },
 ];
 
 const Skills = () => {
