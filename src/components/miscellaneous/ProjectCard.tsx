@@ -24,8 +24,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   githubLink,
 }) => {
   return (
-    <div className="flex flex-col h-auto w-[90%] bg-[#262626] rounded-2xl p-3 items-center justify-center border border-[#FBFBFB]">
-      <div className="text-[20px] md:text-[30px] text-center text-[#F56E0F] underline underline-offset-4">
+    <div className="flex flex-col h-auto w-[90%] bg-primarybackground rounded-2xl p-3 items-center justify-center border border-primarytext">
+      <div className="text-[20px] md:text-[30px] text-center text-highlightedtext underline underline-offset-4">
         {name}
       </div>
       <div
@@ -51,7 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             {techStack.map((tech) => (
               <div
                 key={tech}
-                className="px-2 py-1 bg-black text-[#F56E0F] text-[12px] lg:text-[16px] rounded-full"
+                className="px-2 py-1 bg-black text-highlightedtext text-[12px] lg:text-[16px] rounded-full"
               >
                 {tech}
               </div>
@@ -59,13 +59,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
           <div className="flex gap-2 pt-1 lg:pt-2 w-full justify-center">
             <Link href={liveLink} target="_blank" rel="noopener noreferrer">
-              <button className="text-[15px] md:text-[18px] flex items-center gap-2 bg-[#F56E0F] rounded-xl border border-[#F56E0F] hover:text-[#F56E0F] hover:bg-[#262626] h-[35px] px-3 lg:h-[45px] lg:px-4">
+              <button className="text-[15px] md:text-[18px] flex items-center gap-2 bg-highlightedtext rounded-xl border border-highlightedtext hover:text-highlightedtext hover:bg-primarybackground h-[35px] px-3 lg:h-[45px] lg:px-4">
                 Live
                 <CgScreen className="w-[15px] md:w-[18px] h-[15px] md:h-[18px]" />
               </button>
             </Link>
             <Link href={githubLink} target="_blank" rel="noopener noreferrer">
-              <button className="text-[15px] md:text-[18px] flex items-center gap-2 bg-[#F56E0F] rounded-xl border border-[#F56E0F] hover:text-[#F56E0F] hover:bg-[#262626] h-[35px] px-3 lg:h-[45px] lg:px-4">
+              <button className="text-[15px] md:text-[18px] flex items-center gap-2 bg-highlightedtext rounded-xl border border-highlightedtext hover:text-highlightedtext hover:bg-primarybackground h-[35px] px-3 lg:h-[45px] lg:px-4">
                 Github
                 <FaGithub className="w-[15px] md:w-[18px] h-[15px] md:h-[18px]" />
               </button>

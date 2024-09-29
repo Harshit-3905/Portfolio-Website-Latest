@@ -1,3 +1,4 @@
+import { text } from "stream/consumers";
 import type { Config } from "tailwindcss";
 const {
   default: flattenColorPalette,
@@ -22,6 +23,9 @@ const config = {
     },
     extend: {
       colors: {
+        primarytext: "white",
+        highlightedtext: "#F56E0F",
+        primarybackground: "#262626",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

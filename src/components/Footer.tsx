@@ -3,11 +3,11 @@ import Link from "next/link";
 import SocialLinks from "./miscellaneous/SocialLinks";
 
 const Footer = () => {
-  const hover = "text-[#F56E0F]";
+  const hover = "text-highlightedtext";
 
   return (
     <div className="w-full lg:w-[80%] pt-20 pb-32 flex flex-col justify-center items-center">
-      <div className="text-[#F56E0F] text-2xl font-medium">Harshit Joshi</div>
+      <div className="text-highlightedtext text-2xl font-medium">Harshit Joshi</div>
       <div className="hidden md:flex lg:flex justify-between gap-5 pt-5">
         <Link href="#home" className={`text-lg font-normal hover:${hover}`}>
           Home

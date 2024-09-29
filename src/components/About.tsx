@@ -38,7 +38,7 @@ const About = () => {
           </p>
           <span className="mt-3 lg:space-x-2 justify-center">
             <span className="text-lg">Feel free to reach out to me at </span>
-            <span className="text-[#F56E0F] text-lg font-semibold">
+            <span className="text-highlightedtext text-lg font-semibold">
               harshitjoshidev@gmail.com
             </span>
           </span>
