@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-muted: 240 4.8% 95.9% / 0.6;
+    --accent-foreground: 240 5.9% 10%;
+    --border: 240 5.9% 90%;
+    --line: 240 5.9% 93%;
+    --info: 217.9 91.2% 59.8%;
+    --success: 142.1 76.2% 36.3%;
+    --ring: 240 5% 64.9%;
+    --stripe-color: hsl(240 5.9% 93% / 0.7);
+    --contrib-1: #9be9a8;
+    --contrib-2: #40c463;
+    --contrib-3: #30a14e;
+    --contrib-4: #216e39;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-muted: 240 3.7% 15.9% / 0.4;
+    --accent-foreground: 240 4.9% 83.9%;
+    --border: 240 3.7% 15.9%;
+    --line: 240 4.4% 11%;
+    --info: 217.9 91.2% 59.8%;
+    --success: 142.1 76.2% 36.3%;
+    --ring: 240 5% 64.9%;
+    --stripe-color: hsl(240 4.4% 14% / 0.7);
+    --contrib-1: #0e4429;
+    --contrib-2: #006d32;
+    --contrib-3: #26a641;
+    --contrib-4: #39d353;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01" on;
+  }
+
+  ::selection {
+    @apply bg-foreground text-background;
+  }
+}
+
+@layer utilities {
+  /* Full-viewport-width horizontal rules that extend past the panel column */
+  .screen-line-top {
+    position: relative;
+  }
+
+  .screen-line-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    z-index: -1;
+    height: 1px;
+    width: 200vw;
+    background-color: hsl(var(--line));
+  }
+
+  .screen-line-bottom {
+    position: relative;
+  }
+
+  .screen-line-bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100vw;
+    z-index: -1;
+    height: 1px;
+    width: 200vw;
+    background-color: hsl(var(--line));
+  }
+
+  .screen-line-top-none::before {
+    content: none;
+  }
+
+  .screen-line-bottom-none::after {
+    content: none;
+  }
+
+  /* Diagonal hatch divider between panels */
+  .stripe-divider {
+    position: relative;
+    height: 2rem;
+  }
+
+  .stripe-divider::before {
+    content: "";
+    position: absolute;
+    left: -100vw;
+    z-index: -1;
+    height: 100%;
+    width: 200vw;
+    background-image: repeating-linear-gradient(
+      315deg,
+      var(--stripe-color) 0,
+      var(--stripe-color) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+  }
+
+  /* Dot-grid cover band above the hero */
+  .cover-band {
+    background-color: hsl(var(--foreground) / 0.015);
+    background-image: radial-gradient(
+      hsl(var(--foreground) / 0.09) 1px,
+      transparent 1px
+    );
+    background-size: 12px 12px;
+    background-position: center;
+  }
+
+  .link-underline {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgb(from currentColor r g b / 0.3);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 150ms ease;
+  }
+
+  .link-underline:hover {
+    text-decoration-color: currentColor;
+  }
+}
+
+/* Radix Collapsible animations */
+@keyframes collapsible-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+  }
+}
+
+@keyframes collapsible-up {
+  from {
+    height: var(--radix-collapsible-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.collapsible-content[data-state="open"] {
+  animation: collapsible-down 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.collapsible-content[data-state="closed"] {
+  animation: collapsible-up 160ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collapsible-content[data-state="open"],
+  .collapsible-content[data-state="closed"] {
+    animation-duration: 1ms;
+  }
+}
+
+/* Thin scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
