@@ -10,6 +10,7 @@ import { USER } from "@/data/user";
 import { SOCIALS } from "@/data/socials";
 
 const fontHandwritten = Caveat({
+  subsets: ["latin"],
   weight: ["400", "500"],
   display: "swap",
   variable: "--font-handwritten",
